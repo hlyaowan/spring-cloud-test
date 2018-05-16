@@ -1,0 +1,19 @@
+server:
+    port: 3001
+eureka:
+    client:
+      service-url:
+         defaultZone: http://user:123456@localhost:8762/eureka/
+spring:
+  application:
+    name: test-provider
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
+
+#cloud Camden.SR7 之后的版本好像需要手动开启断路器
+feign:
+  hystrix:
+    enabled: true
